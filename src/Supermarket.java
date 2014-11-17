@@ -1,39 +1,9 @@
 /**
  * Created by PierreM on 17/11/2014.
  */
-public class Supermarket implements PersonQueue {
-    private Person head;
+public class Supermarket {
 
-    public Supermarket() {
-        head = null;
-    }
-
-    public void insert(Person person) {
-        if (head == null) {
-            head = person;
-        } else {
-            Person pointer = head;
-            while (pointer.getNextPerson() != null) {
-                pointer = pointer.getNextPerson();
-            }
-            pointer.setNextPerson(person);
-        }
-    }
-
-    public Person retrieve() {
-        Person retrievedPerson = head;
-        head = head.getNextPerson();
-        return(retrievedPerson);
-    }
-
-    public void addPerson(Person person) {
-        System.out.println("New person in the Queue: "+person.getName());
-        insert(person);
-    }
-
-    public void servePerson() {
-        System.out.println("Serving: "+retrieve().getName());
-    }
+    private PersonQueue queue;
 
     public static void main(String[] args) {
         Supermarket s = new Supermarket();
@@ -41,16 +11,28 @@ public class Supermarket implements PersonQueue {
     }
 
     public void run() {
-        Person p = new Person(1, "John");
-        addPerson(p);
-        p = new Person(2, "Bob");
-        addPerson(p);
-        p = new Person(3, "Basil");
-        addPerson(p);
+        queue = new PersonQueueImpl2();
+        addPerson(new Person(1, "John"));
+        addPerson(new Person(2, "Bob"));
+        addPerson(new Person(3, "Basil"));
 
         servePerson();
         servePerson();
         servePerson();
+
+        addPerson(new Person(2, "Pierre"));
+        servePerson();
     }
+
+    public void addPerson(Person person) {
+        System.out.println("New person in the Queue: "+person.getName());
+        queue.insert(person);
+    }
+
+    public void servePerson() {
+        System.out.println("Serving: "+queue.retrieve().getName());
+    }
+
+
 
 }
