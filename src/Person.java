@@ -4,11 +4,13 @@
 public class Person {
     private int idNumber;
     private String name;
+    private int age;
     private Person nextPerson;
 
-    public Person(int idNumber, String name) {
+    public Person(int idNumber, String name, int age) {
         this.idNumber = idNumber;
         this.name = name;
+        this.age = age;
         this.nextPerson = null;
     }
 
@@ -18,6 +20,14 @@ public class Person {
 
     public Person getNextPerson() {
         return(nextPerson);
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getAge() {
+        return(age);
     }
 
     public String getName() {

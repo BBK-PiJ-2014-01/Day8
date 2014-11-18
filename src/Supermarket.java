@@ -12,15 +12,16 @@ public class Supermarket {
 
     public void run() {
         queue = new PersonQueueImpl2();
-        addPerson(new Person(1, "John"));
-        addPerson(new Person(2, "Bob"));
-        addPerson(new Person(3, "Basil"));
+        addPerson(new Person(1, "John", 32));
+        addPerson(new Person(2, "Bob", 64));
+        addPerson(new Person(3, "Basil", 12));
+        addPerson(new Person(3, "Pierre", 24));
+        addPerson(new Person(3, "Jess", 75));
+        addPerson(new Person(3, "Sarah", 27));
+        addPerson(new Person(3, "Billy", 52));
 
         servePerson();
         servePerson();
-        servePerson();
-
-        addPerson(new Person(2, "Pierre"));
         servePerson();
     }
 
@@ -32,7 +33,5 @@ public class Supermarket {
     public void servePerson() {
         System.out.println("Serving: "+queue.retrieve().getName());
     }
-
-
 
 }

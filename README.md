@@ -7,7 +7,11 @@ Exercise 1:
 
 Exercise 2:
     - Class PersonQueueImpl2 implemented (use Head and Tail pointers vs. Head only in PersonQueueImpl1)
+    - Code complete
 
 Exercise 3:
     - Test is fine
 
+Exercise 4.1:
+    - Classes PersonQueueImpl3 & UnfairQueue implemented
+    - Code complete
