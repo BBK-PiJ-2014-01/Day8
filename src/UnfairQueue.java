@@ -11,7 +11,7 @@ public class UnfairQueue {
     }
 
     public void run() {
-        queue = new PersonQueueImpl3();
+        queue = new PersonQueueImpl4();
         addPerson(new Person(1, "John", 32));
         addPerson(new Person(2, "Bob", 69));
         addPerson(new Person(3, "Basil", 18));
