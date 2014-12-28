@@ -16,6 +16,10 @@ Exercise 4.1:
   - Classes PersonQueueImpl3 & UnfairQueue implemented
   - Code complete
 
+Exercise 5.1:
+  - Class HashUtilities & HashLauncher implemented
+  - Code complete
+
 Exercise 5.2
   - Classes SimpleMapImpl and MapLauncher implemented
   - Code complete
