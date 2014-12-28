@@ -20,6 +20,10 @@ Exercise 5.1:
   - Class HashUtilities & HashLauncher implemented
   - Code complete
 
-Exercise 5.2
+Exercise 5.2:
+  - Interface SimpleMap created
   - Classes SimpleMapImpl and MapLauncher implemented
   - Code complete
+
+Exercise 5.3:
+  - Interface SimpleMap1toN created

@@ -5,7 +5,11 @@ public class HashUtilities {
 
     public static int shortHash(int number) {
         int output = Math.abs(number) % 1000;
-        return(output);
+        // Making sure that the key is strictly greater than 0
+        if(output == 0)
+            return(1);
+        else
+            return(output);
     }
 
 }
