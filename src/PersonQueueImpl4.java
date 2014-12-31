@@ -39,9 +39,23 @@ public class PersonQueueImpl4 implements PersonQueue {
             previous.setNextPerson(pointer.getNextPerson());
             return (retrievedPerson);
         } else {
-            retrievedPerson = head;
-            head = head.getNextPerson();
-            return(retrievedPerson);
+            found = false;
+            pointer = head;
+            if (pointer.getAge() < 18) {
+                previous = pointer;
+                pointer = pointer.getNextPerson();
+            }
+            else
+                found = true;
+            if (found) {
+                retrievedPerson = pointer;
+                previous.setNextPerson(pointer.getNextPerson());
+                return (retrievedPerson);
+            } else {
+                retrievedPerson = head;
+                head = head.getNextPerson();
+                return (retrievedPerson);
+            }
         }
     }
 }

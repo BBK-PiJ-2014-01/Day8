@@ -11,18 +11,23 @@ public class Supermarket {
     }
 
     public void run() {
-        queue = new PersonQueueImpl2();
-        addPerson(new Person(1, "John", 32));
+        queue = new PersonQueueImpl4();
+        addPerson(new Person(1, "John", 6));
         addPerson(new Person(2, "Bob", 64));
-        addPerson(new Person(3, "Basil", 12));
+        addPerson(new Person(3, "Basil", 67));
         addPerson(new Person(3, "Pierre", 24));
         addPerson(new Person(3, "Jess", 75));
-        addPerson(new Person(3, "Sarah", 27));
+        addPerson(new Person(3, "Sarah", 6));
         addPerson(new Person(3, "Billy", 52));
 
         servePerson();
         servePerson();
         servePerson();
+        servePerson();
+        servePerson();
+        servePerson();
+        servePerson();
+
     }
 
     public void addPerson(Person person) {
